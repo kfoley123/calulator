@@ -20,8 +20,10 @@ secondNumber = float(secondNumber)
 
 chosenOperator = input("please select operator (+, -, *, /):  ")
 
+if(secondNumber == 0.0 or secondNumber == 0 and chosenOperator == "/"):
+    print("you can't divide by zero")
 
-answer = operatorMap[chosenOperator](firstNumber,secondNumber)
-
-print("your answer is: " , answer)
+else: 
+    answer = operatorMap[chosenOperator](firstNumber,secondNumber)
+    print("your answer is: " , answer)
 
